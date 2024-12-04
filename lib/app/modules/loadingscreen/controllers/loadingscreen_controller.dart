@@ -20,4 +20,5 @@ class LoadingscreenController extends GetxController {
   }
 
   void increment() => count.value++;
+
 }

@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:mycanal_app/app/routes/app_pages.dart';
 
 class HomeController extends GetxController {
   //TODO: Implement HomeController
@@ -7,17 +8,6 @@ class HomeController extends GetxController {
   @override
   void onInit() {
     super.onInit();
+    Get.toNamed(Routes.LOADINGSCREEN);
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

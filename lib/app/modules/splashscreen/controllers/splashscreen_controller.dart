@@ -1,23 +1,17 @@
 import 'package:get/get.dart';
+import 'package:mycanal_app/app/routes/app_pages.dart';
 
 class SplashscreenController extends GetxController {
   //TODO: Implement SplashscreenController
 
-  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
+    // splashscreenDelayed();
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  Future<void> splashscreenDelayed() async {
+    await Future.delayed(Duration(seconds: 10));
+    Get.offAllNamed(Routes.HOME);
   }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }

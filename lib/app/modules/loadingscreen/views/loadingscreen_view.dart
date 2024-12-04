@@ -9,15 +9,15 @@ class LoadingscreenView extends GetView<LoadingscreenController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('LoadingscreenView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'LoadingscreenView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body:Center(
+       child:Column(
+        mainAxisAlignment:MainAxisAlignment.center,
+        children:[
+          CircularProgressIndicator(
+            color:const Color.fromARGB(255, 248, 38, 23)
+            ),
+        ]
+       )
       ),
     );
   }

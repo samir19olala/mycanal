@@ -8,16 +8,18 @@ class SplashscreenView extends GetView<SplashscreenController> {
   const SplashscreenView({super.key});
   @override
   Widget build(BuildContext context) {
+    controller.splashscreenDelayed();
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SplashscreenView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'SplashscreenView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      body: Center(
+        child:Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children:[
+            Image.asset(
+              "assets/images/splash.png",
+              width: 300,height:160
+            )
+          ]
+        )
       ),
     );
   }
