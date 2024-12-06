@@ -86,7 +86,9 @@ class AccountuserscreenView extends GetView<AccountuserscreenController> {
                               materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,  // Enlever la zone de tap
                               activeColor: Colors.blue,  // Couleur du switch quand activé
                               inactiveThumbColor: const Color.fromARGB(255, 92, 91, 91),  // Couleur du thumb quand inactif
-                              inactiveTrackColor: Colors.black87,  // Couleur du track quand inactif
+                              inactiveTrackColor: Colors.black87, 
+                               // Couleur du track quand inactif
+                              activeTrackColor:Colors.blue.shade300,
                             ),
                           ),
                         ],
