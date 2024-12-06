@@ -5,12 +5,12 @@ abstract class Routes {
   Routes._();
   static const HOME = _Paths.HOME;
   static const SPLASHSCREEN = _Paths.SPLASHSCREEN;
-  static const LOADINGSCREEN = _Paths.LOADINGSCREEN;
+  static const ACCOUNTUSERSCREEN = _Paths.ACCOUNTUSERSCREEN;
 }
 
 abstract class _Paths {
   _Paths._();
   static const HOME = '/home';
   static const SPLASHSCREEN = '/splashscreen';
-  static const LOADINGSCREEN = '/loadingscreen';
+  static const ACCOUNTUSERSCREEN = '/accountuserscreen';
 }

@@ -12,6 +12,6 @@ class SplashscreenController extends GetxController {
 
   Future<void> splashscreenDelayed() async {
     await Future.delayed(Duration(seconds: 10));
-    Get.offAllNamed(Routes.HOME);
+    Get.offAllNamed(Routes.ACCOUNTUSERSCREEN);
   }
 }

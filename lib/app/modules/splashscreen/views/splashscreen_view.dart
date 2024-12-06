@@ -11,16 +11,9 @@ class SplashscreenView extends GetView<SplashscreenController> {
     controller.splashscreenDelayed();
     return Scaffold(
       body: Center(
-        child:Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children:[
-            Image.asset(
-              "assets/images/splash.png",
-              width: 300,height:160
-            )
-          ]
-        )
-      ),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+        Image.asset("assets/images/splash.png", width: 300, height: 160)
+      ])),
     );
   }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
-
 import '../controllers/home_controller.dart';
+import '../../components/loading_screen.dart';
 
 class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
@@ -13,12 +13,24 @@ class HomeView extends GetView<HomeController> {
         title: const Text('HomeView'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: Obx(() {
+        if (controller.isLoading.value) {
+          return Center(
+            child: Column(
+              children: [
+                Text(
+                  'HomeView is working',
+                  style: TextStyle(fontSize: 20),
+                ),
+              ],
+            ),
+          );
+        } else {
+          return Center(
+            child: Loadingscreen(),
+          );
+        }
+      }),
     );
   }
 }

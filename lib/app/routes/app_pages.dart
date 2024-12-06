@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 
+import '../modules/accountuserscreen/bindings/accountuserscreen_binding.dart';
+import '../modules/accountuserscreen/views/accountuserscreen_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
-import '../modules/loadingscreen/bindings/loadingscreen_binding.dart';
-import '../modules/loadingscreen/views/loadingscreen_view.dart';
 import '../modules/splashscreen/bindings/splashscreen_binding.dart';
 import '../modules/splashscreen/views/splashscreen_view.dart';
 
@@ -12,7 +12,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOADINGSCREEN;
+  static const INITIAL = Routes.SPLASHSCREEN;
 
   static final routes = [
     GetPage(
@@ -26,9 +26,9 @@ class AppPages {
       binding: SplashscreenBinding(),
     ),
     GetPage(
-      name: _Paths.LOADINGSCREEN,
-      page: () => const LoadingscreenView(),
-      binding: LoadingscreenBinding(),
+      name: _Paths.ACCOUNTUSERSCREEN,
+      page: () => const AccountuserscreenView(),
+      binding: AccountuserscreenBinding(),
     ),
   ];
 }

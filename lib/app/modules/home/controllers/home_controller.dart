@@ -1,13 +1,18 @@
 import 'package:get/get.dart';
-import 'package:mycanal_app/app/routes/app_pages.dart';
+
 
 class HomeController extends GetxController {
   //TODO: Implement HomeController
 
-  final count = 0.obs;
+  final RxBool isLoading = false.obs;
   @override
   void onInit() {
+    getData();
     super.onInit();
-    Get.toNamed(Routes.LOADINGSCREEN);
+  }
+
+  void getData() async {
+    await Future.delayed(Duration(seconds: 10));
+    isLoading(true);
   }
 }
