@@ -5,13 +5,13 @@ class SplashscreenController extends GetxController {
   //TODO: Implement SplashscreenController
 
   @override
-  void onInit() {
+  void onInit() async{
     super.onInit();
-    // splashscreenDelayed();
+    splashscreenDelayed();
   }
 
   Future<void> splashscreenDelayed() async {
     await Future.delayed(Duration(seconds: 10));
-    Get.offAllNamed(Routes.ACCOUNTUSERSCREEN);
+    Get.offAllNamed(Routes.PRESENTATION);
   }
 }

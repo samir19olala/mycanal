@@ -8,7 +8,6 @@ class SplashscreenView extends GetView<SplashscreenController> {
   const SplashscreenView({super.key});
   @override
   Widget build(BuildContext context) {
-    controller.splashscreenDelayed();
     return Scaffold(
       body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [

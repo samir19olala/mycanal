@@ -36,10 +36,11 @@ class AccountuserscreenView extends GetView<AccountuserscreenController> {
                     constraints: const BoxConstraints(maxWidth: 350),
                     child: GridView.builder(
                       gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 3,
+                        SliverGridDelegateWithMaxCrossAxisExtent(
+                        mainAxisExtent: 120,
                         crossAxisSpacing: 0,
                         mainAxisSpacing: 0,
+                        maxCrossAxisExtent: 150,
                       ),
                       padding: const EdgeInsets.all(2),
                       itemCount: controller.userAccounts.length + 1,

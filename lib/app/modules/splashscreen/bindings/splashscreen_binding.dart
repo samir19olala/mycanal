@@ -7,6 +7,6 @@ class SplashscreenBinding extends Bindings {
   void dependencies() {
     Get.lazyPut<SplashscreenController>(
       () => SplashscreenController(),
-    );
+    );    
   }
 }

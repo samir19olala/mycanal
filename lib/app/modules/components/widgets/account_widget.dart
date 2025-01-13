@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mycanal_app/app/routes/app_pages.dart';
 import '../../../data/account_model.dart';
 import 'package:get/get.dart';
 
@@ -8,6 +9,7 @@ class AddUserAccount extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      
       onTap: () {
         print("add user account");
       },
@@ -16,12 +18,19 @@ class AddUserAccount extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.add_circle_outline, size: 70,color: Colors.white38,),
+            Icon(
+              Icons.add_circle_outline,
+              size: 70,
+              color: Colors.white38,
+            ),
             SizedBox(height: 8.0),
-            const Text("Ajouter",style: TextStyle(
+            const Text(
+              "Ajouter",
+              style: TextStyle(
                 fontWeight: FontWeight.w600,
                 fontSize: 14,
-              ),)
+              ),
+            )
           ],
         ),
       ),
@@ -42,7 +51,7 @@ class AccountWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        print(user.name);
+        Get.toNamed(Routes.HOME,arguments:user);
       },
       child: Card(
         color: Get.theme.cardColor,

@@ -5,20 +5,20 @@ class AccountuserscreenController extends GetxController {
   //TODO: Implement AccountuserscreenController
 
   final RxBool isLoading = true.obs;
-  final List<UserAccount> userAccounts=[];
+  final RxList<UserAccount> userAccounts = <UserAccount>[].obs;
 
   @override
-  void onInit() {
-    getData();
+  void onInit() async {
     super.onInit();
+    getData();
   }
 
-  Future<List<UserAccount>> getUserAccounts() async{
+  Future<List<UserAccount>> getUserAccounts() async {
     return userAccountData;
-
   }
-  void getData() async {
-    userAccounts.addAll(await getUserAccounts()) ;
+
+  Future<void> getData() async {
+    userAccounts.addAll(await getUserAccounts());
     await Future.delayed(Duration(seconds: 10));
     isLoading(false);
   }
